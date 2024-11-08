@@ -16,6 +16,10 @@ app.use(express.json())
 
 initializeDatabase() // this means calling the database..
 
+app.get("/", (req, res) => {
+    res.send("Hello, Express Server!")
+})
+
 
 async function createMovie(newMovie){
     try {
